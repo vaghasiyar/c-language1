@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    char ch, ascii;
+    printf("Enter a ch: ");
+    scanf("%c", &ch);
+
+    if (ch >= 'A' && ch <= 'Z') {
+        ascii = ch + 32;
+        printf(" %c", ascii);
+    }
+    else if (ch >= 'a' && ch <= 'z') {
+        ascii = ch - 32;
+        printf(" %c", ascii);
+    }
+}
+    
+    
+
+    return 0;
+}

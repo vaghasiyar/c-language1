@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdio.h>
+int main()
+{
+   int ss,gk,sci,total,per,grede;
+   printf("enter value ss mark");
+   scanf("%d",&ss);
+   printf("enter value gk mark");
+   scanf("%d",&gk);
+   printf("enter value sci mark");
+   scanf("%d",&sci);
+   total=(ss+gk+sci);
+   printf("total is :%d",total);
+   per=(total*100)/300;
+    printf("Percentage: %d\n", per);
+  if(per>75){
+  printf("grede A");
+  }
+   else if(per>60&&per<75){
+   printf("grede B");
+}
+   else if (per>45&&per<60){
+   printf("grede C");
+  }
+else if(per>35&&per<45){
+ printf("grede D");
+}
+  else {
+  printf("fail");
+}
+}

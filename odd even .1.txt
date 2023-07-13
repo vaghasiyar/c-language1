@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+int main() {
+    int arr[5], odd = 0, even = 0,  i;
+    
+    for (i = 0; i < 5; i++) {
+        printf("Enter value a[%d]: ", i);
+        scanf("%d", &arr[i]);
+    }
+    
+    printf("\nPosition\tValue");
+    
+    for (i = 0; i < 5; i++) {
+        printf("\n%d\t%d", i, arr[i]);
+        
+        if (i % 2 == 0)
+            odd=odd + arr[i];
+        else
+            even=even + arr[i];
+        
+        
+  
+    }
+    
+    printf("\nOdd value: %d", odd);
+    printf("\nEven value: %d", even);
+   
+    
+}

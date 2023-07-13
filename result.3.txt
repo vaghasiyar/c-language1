@@ -1,0 +1,55 @@
+#include<stdio.h>
+
+int main() {
+   int ss[5], sci[5], gk[5], eng[5], guj[5], i, total = 0;
+   float per;
+
+   for(i = 0; i < 5; i++) {
+      printf("Enter ss mark %d: ", i);
+      scanf("%d", &ss[i]);
+   }
+   printf("\n");
+   for(i = 0; i < 5; i++) {
+      printf("Enter sci mark %d: ", i);
+      scanf("%d", &sci[i]);
+   }
+   printf("\n");
+   for(i = 0; i < 5; i++) {
+      printf("Enter gk mark %d: ", i);
+      scanf("%d", &gk[i]);
+   }
+   printf("\n");
+   for(i = 0; i < 5; i++) {
+      printf("Enter eng mark %d: ", i);
+      scanf("%d", &eng[i]);
+   }
+   printf("\n");
+   for(i = 0; i < 5; i++) {
+      printf("Enter guj mark %d: ", i);
+      scanf("%d", &guj[i]);
+   }
+
+   printf("\nss\tsci\teng\tguj\tgk\ttotal\nper");
+   for(i = 0; i < 5; i++) {
+      total = ss[i] + eng[i] + guj[i] + gk[i] + sci[i];
+      per = (total * 100) / 500;
+      printf("\n%d\t%d\t%d\t%d\t%d\t%d\n%.2f", ss[i], sci[i], eng[i], guj[i], gk[i], total, per);
+      if(per > 90) {
+         printf("\tgrade A");
+      }
+      else if(per > 75 && per <= 90) {
+         printf("\tgrade B");
+      }
+      else if(per > 55 && per <= 75) {
+         printf("\tgrade C");
+      }
+      else if(per > 45 && per <= 55) {
+         printf("\tgrade D");
+      }
+      else {
+         printf("\tfail");
+      }
+   }
+
+   return 0;
+}
